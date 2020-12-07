@@ -1,0 +1,30 @@
+VAO = Vertex Array Objects {
+VAO is an object in which you can store Data about 3d Objects. The
+}
+
+VBO = Vertex Buffer Object {
+VBO is a data of anything. i just like an array of any data
+}
+
+OLD WHILE LOOP
+
+while (!Display.isCloseRequested()) {
+            //game logic
+            //entity.increasePosition(0, 0, -0.1f);
+            entity.increaseRotation(0 , 1, 0);
+            camera.move();
+            //camera.lr(entity); //custom method
+
+            //rendering
+
+            renderer.processTerrain(terrain);
+            renderer.processTerrain(terrain2);
+            renderer.processEntity(entity);
+
+            renderer.render(light, camera);
+            DisplayManager.updateDisplay();
+        }
+        renderer.cleanUp();
+        loader.cleanUp();
+        DisplayManager.closeDisplay();
+    }
